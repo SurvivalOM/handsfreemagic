@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HandsFree Magic — You speak. It types. Free offline dictation for Windows</title>
+<meta name="description" content="HandsFree Magic is a 100% free, offline speech-to-text tool for Windows. Press one key, speak, and your words appear in any app. No cloud, no account, no cost.">
+<meta property="og:title" content="HandsFree Magic — You speak. It types.">
+<meta property="og:description" content="Free, offline dictation for Windows. Your voice never leaves your computer.">
+<meta property="og:url" content="https://handsfreemagic.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%232a1a4a'/%3E%3Cpath d='M11 4 l1.7 4.6 4.6 1.7 -4.6 1.7 -1.7 4.6 -1.7-4.6 -4.6-1.7 4.6-1.7 Z' fill='%23f7c948'/%3E%3Cpath d='M17.5 14 l0.8 1.9 1.9 0.8 -1.9 0.8 -0.8 1.9 -0.8-1.9 -1.9-0.8 1.9-0.8 Z' fill='%23e9d8ff'/%3E%3C/svg%3E">
+<style>
+  :root{--purple:#2a1a4a;--purple2:#1d1530;--gold:#f7c948;--gold2:#f0b429;--lav:#e9d8ff;--ink:#efeaf7;--muted:#b9aed3;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:system-ui,'Segoe UI',sans-serif;background:var(--purple2);color:var(--ink);line-height:1.65;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px;}
+  header{padding:20px 0;display:flex;align-items:center;gap:10px;}
+  header .mark{width:34px;height:34px;border-radius:8px;background:var(--purple);display:flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid #3d2a66;}
+  header .name{font-weight:800;font-size:18px;}
+  header .name b{color:var(--gold);font-weight:800;}
+  .hero{text-align:center;padding:52px 0 40px;}
+  .hero h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-1px;line-height:1.12;}
+  .hero h1 span{color:var(--gold);}
+  .hero p.sub{max-width:620px;margin:20px auto 8px;font-size:18px;color:var(--muted);}
+  .cta{display:inline-block;margin-top:28px;background:var(--gold2);color:var(--purple);font-weight:800;font-size:18px;padding:16px 34px;border-radius:12px;text-decoration:none;box-shadow:0 8px 26px rgba(240,180,41,.28);}
+  .cta:hover{background:var(--gold);}
+  .tiny{display:block;margin-top:12px;font-size:13px;color:var(--muted);}
+  .pillrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px;}
+  .pill{border:1px solid #45326e;border-radius:999px;padding:7px 16px;font-size:13.5px;color:var(--lav);background:#241a42;}
+  section{padding:44px 0;}
+  h2{font-size:26px;font-weight:800;text-align:center;margin-bottom:26px;}
+  h2 em{color:var(--gold);font-style:normal;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .step{background:#241a42;border:1px solid #3d2a66;border-radius:14px;padding:22px;}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--gold2);color:var(--purple);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .step h3{font-size:17px;margin-bottom:6px;}
+  .step p{font-size:14.5px;color:var(--muted);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .feat{background:#241a42;border:1px solid #3d2a66;border-radius:14px;padding:20px 22px;}
+  .feat h3{font-size:16px;margin-bottom:5px;color:var(--lav);}
+  .feat p{font-size:14.5px;color:var(--muted);}
+  table{width:100%;border-collapse:collapse;background:#241a42;border-radius:14px;overflow:hidden;font-size:15px;}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid #3d2a66;}
+  th{background:var(--purple);font-size:14px;}
+  td.good{color:var(--gold);font-weight:700;}
+  .faq details{background:#241a42;border:1px solid #3d2a66;border-radius:12px;padding:16px 20px;margin-bottom:10px;}
+  .faq summary{cursor:pointer;font-weight:700;font-size:15.5px;}
+  .faq p{margin-top:10px;font-size:14.5px;color:var(--muted);}
+  footer{border-top:1px solid #3d2a66;padding:30px 0 44px;text-align:center;font-size:13.5px;color:var(--muted);}
+  footer a{color:var(--lav);}
+  @media (max-width:560px){ th,td{padding:10px 8px;font-size:13px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M11 4 l1.7 4.6 4.6 1.7 -4.6 1.7 -1.7 4.6 -1.7-4.6 -4.6-1.7 4.6-1.7 Z" fill="#f7c948"/><path d="M17.5 14 l0.8 1.9 1.9 0.8 -1.9 0.8 -0.8 1.9 -0.8-1.9 -1.9-0.8 1.9-0.8 Z" fill="#e9d8ff"/></svg></div>
+    <div class="name">HandsFree <b>Magic</b></div>
+  </header>
+
+  <div class="hero">
+    <h1>You speak.<br><span>It types.</span></h1>
+    <p class="sub">HandsFree Magic is a 100% free dictation tool for Windows. Press one key, talk, and your words appear in any app — Word, WhatsApp, email, anywhere. No internet needed. Your voice never leaves your computer.</p>
+    <a class="cta" href="https://github.com/SurvivalOM/handsfreemagic/releases/latest/download/HandsFreeMagic-Setup.exe">&#11015;&#65039; Download free for Windows</a>
+    <span class="tiny">12 MB installer &middot; Windows 10/11 (64-bit) &middot; No account, no signup, no cost</span>
+    <div class="pillrow">
+      <div class="pill">&#128274; 100% offline &amp; private</div>
+      <div class="pill">&#9889; Fast local AI</div>
+      <div class="pill">&#128176; Free forever</div>
+      <div class="pill">&#10024; Works in every app</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Three steps to <em>magic</em></h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Install and pick a voice model</h3><p>One small download. The AI voice model downloads once and then lives on your computer.</p></div>
+      <div class="step"><div class="n">2</div><h3>Hold Ctrl + Space and speak</h3><p>Anywhere you can type — documents, chats, emails, browsers. Hold the keys while you talk.</p></div>
+      <div class="step"><div class="n">3</div><h3>Release. Words appear.</h3><p>Your speech is turned into text right on your machine and typed into the app you are using.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why people switch to HandsFree Magic</h2>
+    <div class="grid">
+      <div class="feat"><h3>&#128274; Your voice stays home</h3><p>Everything happens on your computer. No audio is ever uploaded, recorded on a server, or shared. Perfect for private notes, business emails, and journals.</p></div>
+      <div class="feat"><h3>&#128176; Free — actually free</h3><p>No trial, no word limits, no subscription. Popular cloud dictation tools charge up to $144 per year for what this does for $0.</p></div>
+      <div class="feat"><h3>&#9889; No internet? No problem</h3><p>On a flight, in a village, on hotspot data — dictation keeps working because nothing needs the cloud.</p></div>
+      <div class="feat"><h3>&#10024; Works in every app</h3><p>Not a separate notepad. It types straight into whatever is in front of you — Word, WhatsApp Web, Gmail, Excel, coding editors, anything.</p></div>
+      <div class="feat"><h3>&#129504; Modern AI accuracy</h3><p>Powered by the same class of AI speech models used by the big cloud services — running quietly on your own processor.</p></div>
+      <div class="feat"><h3>&#127760; Many languages</h3><p>English works beautifully out of the box, and optional models bring support for dozens of world languages.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The honest comparison</h2>
+    <table>
+      <tr><th></th><th>HandsFree Magic</th><th>Typical paid dictation apps</th></tr>
+      <tr><td>Price</td><td class="good">Free forever</td><td>$12&ndash;15 / month (~$144 / year)</td></tr>
+      <tr><td>Where your voice goes</td><td class="good">Nowhere — stays on your PC</td><td>Uploaded to company servers</td></tr>
+      <tr><td>Works without internet</td><td class="good">Yes</td><td>No</td></tr>
+      <tr><td>Word limits</td><td class="good">None</td><td>Free tiers capped (e.g. 2,000 words/week)</td></tr>
+      <tr><td>Account required</td><td class="good">No</td><td>Yes</td></tr>
+    </table>
+  </section>
+
+  <section class="faq">
+    <h2>Questions people ask</h2>
+    <details><summary>Is it really free? What's the catch?</summary><p>Really free, no catch, no locked features. HandsFree Magic is built on proven open-source technology and is brought to you by the Future Proofing Lifestyle network. In future, a small sponsor message inside the app may help keep it free — dictation itself will never be paywalled.</p></details>
+    <details><summary>Does my voice or text ever leave my computer?</summary><p>No. The speech recognition runs entirely on your machine. You can switch off your Wi-Fi and it keeps working — that is the proof.</p></details>
+    <details><summary>Windows showed a blue warning when I installed. Why?</summary><p>That is Windows SmartScreen being cautious with any new, young app it hasn't seen many times yet. Click "More info" and then "Run anyway". The app is open, inspectable, and does not touch the internet during dictation.</p></details>
+    <details><summary>Which Windows versions are supported?</summary><p>Windows 10 and Windows 11, 64-bit. Support for Mac and Linux is on the roadmap.</p></details>
+    <details><summary>Which languages can I dictate in?</summary><p>English is excellent out of the box. In Settings you can download alternative models (like Whisper) that understand dozens of languages including Hindi and Tamil.</p></details>
+    <details><summary>Who is behind this?</summary><p>HandsFree Magic is a Future Proofing Lifestyle tool, built on the excellent open-source project <a href="https://github.com/cjpais/Handy">Handy</a> by CJ Pais and contributors (MIT license). We believe good tools should educate, empower, and enlighten — not extract.</p></details>
+  </section>
+
+  <div class="hero" style="padding-top:8px;">
+    <a class="cta" href="https://github.com/SurvivalOM/handsfreemagic/releases/latest/download/HandsFreeMagic-Setup.exe">&#11015;&#65039; Get HandsFree Magic — free</a>
+    <span class="tiny">You speak. It types. That's the whole magic.</span>
+  </div>
+
+  <footer>
+    <p>A <a href="https://futureproofinglifestyle.com">Future Proofing Lifestyle</a> tool &middot; Built on the open-source <a href="https://github.com/cjpais/Handy">Handy</a> project (MIT license)</p>
+    <p style="margin-top:6px;">&copy; 2026 HandsFree Magic &middot; handsfreemagic.com</p>
+  </footer>
+</div>
+</body>
+</html>
